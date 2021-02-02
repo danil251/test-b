@@ -25,7 +25,6 @@ function Modal(props) {
         let p = i.toUpperCase()
         let text = props.text.replace(i, p)
         dispatch(changeTextAC(text, props.id))
-
     }
 
 
@@ -33,7 +32,7 @@ function Modal(props) {
     return (
         <div className={s.container}>
             <div className={s.modal}>
-                <textarea onSelect={selectedText} value={props.text} rows='25' cols='100'></textarea>
+                <textarea onSelect={selectedText} defaultValue={props.text}  rows='25' cols='100'></textarea>
                 <button onClick={props.closeModal}>Закрыть</button>
                 <button onClick={upperCase}>К верхнему регистру</button>
                 <button onClick={lowerCase}>К нижнему регистру</button>

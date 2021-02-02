@@ -21,7 +21,7 @@ export const editPageReducer = (state = initialState, action) => {
             return {...state, modalIsOpen: action.modalIsOpen, currentFile: null}
         }
         case 'CHANGE-TEXT': {
-            return {...state, files: state.files.map(f => f.id === action.id? f.text = action.text : f.text )}
+            return {...state, files: state.files.map(f => f.id === action.id? {...f, text: action.text} : f )}
         }
         default:
             return {...state}

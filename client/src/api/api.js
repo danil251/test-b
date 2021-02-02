@@ -11,4 +11,12 @@ export const fileAPI = {
     setFile() {
         return   instance.get('files');
     },
+
+
+    download(fileName) {
+        return instance.post('uploads', {fileName}, {
+          responseType: "text"
+        }).then(res => res.data);
+    }
+
 }
