@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+}
+.buttons{
+    margin: 10px;
+}
+.button{
+    margin: 5px;
+}
+.color {
+    color: red;
+}
